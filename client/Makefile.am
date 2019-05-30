@@ -89,7 +89,10 @@ boinc_client_SOURCES = \
     thread.cpp \
     time_stats.cpp \
     whetstone.cpp \
-    work_fetch.cpp
+    work_fetch.cpp \
+    linux/user_idle_time_detection.c \
+    linux/user_idle_time_detection.h \
+    linux/gnome/gnome_dbus_interface.h
 
 boinc_client_DEPENDENCIES = $(LIBBOINC)
 boinc_client_CPPFLAGS = $(AM_CPPFLAGS)
