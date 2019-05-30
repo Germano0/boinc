@@ -19,6 +19,8 @@
 // Lots of this is system-dependent so lots of #ifdefs.
 // Try to keep this well-organized and not nested.
 
+#include "linux/user_idle_time_detection.h"
+
 #include "version.h"         // version numbers from autoconf
 
 #include "cpp.h"
@@ -2033,8 +2035,14 @@ bool xss_idle(long idle_threshold) {
 #endif // LINUX_LIKE_SYSTEM
 
 bool HOST_INFO::users_idle(bool check_all_logins, double idle_time_to_run) {
+    double user_idle_time;
+    double user_pref_idle_time_in_ms;
+    user_idle_time = get_user_idle_time();
+    user_pref_idle_time_in_ms = (idle_time_to_run * 60000);
+    
+    
     time_t idle_time = time(0) - (long) (60 * idle_time_to_run);
-
+    
 #if HAVE_UTMP_H
     if (check_all_logins) {
         if (!all_logins_idle(idle_time)) {
