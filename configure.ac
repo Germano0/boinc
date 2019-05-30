@@ -1010,6 +1010,11 @@ if test "${enable_manager}" = yes ; then
   PKG_CHECK_MODULES(LIBNOTIFY, [libnotify])
 fi
 
+dnl ---------- GLib --------------------------------------------------
+if test "${enable_manager}" = yes ; then
+  PKG_CHECK_MODULES([GLIB],[glib-2.0 gio-2.0])
+fi
+
 dnl ---------- Sqlite3 ----------------------------------------------------
 if test "${enable_manager}" = yes ; then
   AM_PATH_SQLITE3
