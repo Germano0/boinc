@@ -2037,7 +2037,7 @@ bool xss_idle(long idle_threshold) {
 bool HOST_INFO::users_idle(bool check_all_logins, double idle_time_to_run) {
     double user_idle_time;
     double user_pref_idle_time_in_ms;
-    user_idle_time = get_user_idle_time();
+    //user_idle_time = get_user_idle_time();
     user_pref_idle_time_in_ms = (idle_time_to_run * 60000);
     
     

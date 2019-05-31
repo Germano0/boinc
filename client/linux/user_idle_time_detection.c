@@ -1,7 +1,7 @@
 #include <gio/gio.h>
+#include "user_idle_time_detection.h"
 GDBusProxy* create_proxy()
 {
-    GDBusProxy* proxy = NULL;
     proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
 	                                       G_DBUS_PROXY_FLAGS_NONE,
 	                                       NULL,
