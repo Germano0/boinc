@@ -146,4 +146,6 @@ install-exec-hook:
 EXTRA_DIST = *.h \
     mac \
     translation \
-    win
+    win \
+    linux/user_idle_time_detection.h \
+    linux/gnome/gnome_dbus_interface.h
