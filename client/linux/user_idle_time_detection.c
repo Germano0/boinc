@@ -21,20 +21,21 @@ double get_user_idle_time()
     GVariant* ret = NULL;
     proxy = create_proxy();
     
-	ret = g_dbus_proxy_call_sync(proxy,
-	                              GNOME_DBUS_METHOD_SETTINGS,
-	                              NULL,
-	                              G_DBUS_CALL_FLAGS_NONE, -1,
-	                              NULL, &error);
-	if (!ret) {
-		g_dbus_error_strip_remote_error (error);
-		g_print ("GetIdletime failed: %s\n", error->message);
-		g_error_free (error);
-		return;
-	}
+    ret = g_dbus_proxy_call_sync(proxy,
+	                         GNOME_DBUS_METHOD_SETTINGS,
+	                         NULL,
+	                         G_DBUS_CALL_FLAGS_NONE, -1,
+	                         NULL, &error);
+    if (!ret)
+    {
+        g_dbus_error_strip_remote_error (error);
+        g_print ("GetIdletime failed: %s\n", error->message);
+        g_error_free (error);
+        return;
+    }
 
-	g_variant_get(ret, "(t)", &user_idle_time);
-	user_idle_time_double = (double)user_idle_time;
+    g_variant_get(ret, "(t)", &user_idle_time);
+    user_idle_time_double = (double)user_idle_time;
     g_variant_unref (ret);
     return user_idle_time_double;
 }
