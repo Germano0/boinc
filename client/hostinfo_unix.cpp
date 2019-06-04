@@ -19,7 +19,7 @@
 // Lots of this is system-dependent so lots of #ifdefs.
 // Try to keep this well-organized and not nested.
 
-#include "linux/user_idle_time_detection.h"
+#include "linux-unix/user_idle_time_detection.h"
 
 #include "version.h"         // version numbers from autoconf
 

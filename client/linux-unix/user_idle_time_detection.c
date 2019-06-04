@@ -1,6 +1,6 @@
 #include <gio/gio.h>
-#include "linux/gnome/gnome_dbus_interface.h"
-#include "linux/user_idle_time_detection.h"
+#include "linux-unix/gnome/gnome_dbus_interface.h"
+#include "linux-unix/user_idle_time_detection.h"
 GDBusProxy* create_proxy()
 {
     proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
