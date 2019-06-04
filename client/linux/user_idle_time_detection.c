@@ -17,8 +17,8 @@ double get_user_idle_time()
 {
     guint64 user_idle_time;
     double user_idle_time_double;
-	GError* error = NULL;
-	GVariant* ret = NULL;
+    GError* error = NULL;
+    GVariant* ret = NULL;
     proxy = create_proxy();
     
 	ret = g_dbus_proxy_call_sync(proxy,
