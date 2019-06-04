@@ -22,7 +22,7 @@ double get_user_idle_time()
     // TODO
     // add check if(proxy == NULL)
     // add also code to free proxy resource when BOINC client is closed
-    if(proxy == NULL)
+    if(!proxy)
     {
         proxy = create_proxy();
     }
