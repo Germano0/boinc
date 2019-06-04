@@ -19,6 +19,9 @@ double get_user_idle_time()
     double user_idle_time_double;
     GError* error = NULL;
     GVariant* ret = NULL;
+    // TODO
+    // add check if(proxy == NULL)
+    // add also code to free proxy resource when BOINC client is closed
     proxy = create_proxy();
     
     ret = g_dbus_proxy_call_sync(proxy,
