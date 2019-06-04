@@ -22,7 +22,10 @@ double get_user_idle_time()
     // TODO
     // add check if(proxy == NULL)
     // add also code to free proxy resource when BOINC client is closed
-    proxy = create_proxy();
+    if(proxy == NULL)
+    {
+        proxy = create_proxy();
+    }
     
     ret = g_dbus_proxy_call_sync(proxy,
 	                         GNOME_DBUS_METHOD_SETTINGS,
