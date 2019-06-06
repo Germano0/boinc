@@ -22,7 +22,7 @@ double get_user_idle_time()
     // TODO
     // add check if(proxy == NULL)
     // add also code to free proxy resource when BOINC client is closed
-    if(!proxy)
+    if(proxy == NULL)
     {
         proxy = create_proxy();
     }
@@ -32,7 +32,7 @@ double get_user_idle_time()
 	                         NULL,
 	                         G_DBUS_CALL_FLAGS_NONE, -1,
 	                         NULL, &error);
-    if (!ret)
+    if (ret == NULL)
     {
         g_dbus_error_strip_remote_error (error);
         g_print ("GetIdletime failed: %s\n", error->message);

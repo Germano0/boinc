@@ -90,7 +90,7 @@ boinc_client_SOURCES = \
     time_stats.cpp \
     whetstone.cpp \
     work_fetch.cpp \
-    linux/user_idle_time_detection.c
+    linux-unix/user_idle_time_detection.c
 
 boinc_client_DEPENDENCIES = $(LIBBOINC)
 boinc_client_CPPFLAGS = $(AM_CPPFLAGS) $(GIO_CFLAGS) $(GLIB_CFLAGS)
@@ -147,5 +147,5 @@ EXTRA_DIST = *.h \
     mac \
     translation \
     win \
-    linux/user_idle_time_detection.h \
-    linux/gnome/gnome_dbus_interface.h
+    linux-unix/user_idle_time_detection.h \
+    linux-unix/gnome/gnome_dbus_interface.h

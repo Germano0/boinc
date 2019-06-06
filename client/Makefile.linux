@@ -44,7 +44,7 @@ OBJ = \
     scheduler_op.o \
     time_stats.o  \
     whetstone.o \
-    linux/user_idle_time_detection.o
+    linux-unix/user_idle_time_detection.o
 
 clean:
 	rm $(PROGS) $(OBJ)
