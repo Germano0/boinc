@@ -10,6 +10,7 @@ function XMLHttpRequest_test()
 	{
 		throw new Error("Expected textual response; got: " + type);
 	}
+	console.log(request);
 } 
 
 

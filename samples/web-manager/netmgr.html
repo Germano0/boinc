@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <script src="web.js"></script>
+        <script src="ping_xmlhttprequest.js"></script>
         <script src="msg.js"></script>
         <script src="upd.js"></script>
         <script src="get_vbox_version.js"></script>
@@ -49,7 +49,7 @@
             <div class="col-sm-12">
                 <h2>BOINC NetManager</h2>   
                 <div id = "buttons" >
-                    <button type="button" onclick="WebSocketTest()" class="btn btn-primary">Ping the BOINC client</button>
+                    <button type="button" onclick="XMLHttpRequest_test()" class="btn btn-primary">Ping the BOINC client</button>
                     <button id="gt" type="button" onclick="GetMessages()" class="btn btn-primary">Get the messages</button>
                     <button type="button" onclick="Update()" class="btn btn-primary">Update Project</button>
                     <button type="button" onclick="Get_VBox_Version()" class="btn btn-primary">Get VirtualBox Version</button>
